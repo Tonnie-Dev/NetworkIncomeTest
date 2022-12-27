@@ -1,7 +1,9 @@
 package com.uxstate.networkincometest.data.remote.mappers
 
 import com.uxstate.networkincometest.data.remote.dto.NetworkIncomeResponseDTO
+import com.uxstate.networkincometest.domain.model.ReceiptItem.Item
 import com.uxstate.networkincometest.domain.model.ReceiptItem.ReceiptItem
+import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
@@ -10,10 +12,10 @@ import java.util.*
 fun NetworkIncomeResponseDTO.toModel():ReceiptItem{
     
     return ReceiptItem(
-            date =,
-            customerName = "",
-            description = "",
-            items = listOf(),
+            date =this.date.toLocalDate(),
+            customerName = this.customer.customerName,
+            description = this.description,
+            items = List<Item>(this.productList.size){ i -> this.productList[i]},
             totalPrice = "",
             discount = "",
             totalPayable = "",
@@ -22,12 +24,16 @@ fun NetworkIncomeResponseDTO.toModel():ReceiptItem{
     
 }
 
+
+//ProductDTO to model [ReceiptItem]
+
 //Extension function on String class to LocalDateTime
 
-fun String.toLocalDate(){
+fun String.toLocalDate():LocalDateTime{
 
-    val pattern = "dd:MM:yyyy HH:mm a"
-    val dateFormatter = DateTimeFormatter.ofPattern(pattern, Locale.getDefault())
+    val pattern = "yyyy-MM-ddTHH:mm:ss"
+    val dateFormatter = DateTimeFormatter.ofPattern(pattern)
+    return LocalDateTime.parse(this,dateFormatter)
 
 }
 

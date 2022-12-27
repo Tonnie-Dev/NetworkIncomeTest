@@ -3,7 +3,7 @@ package com.uxstate.networkincometest.data.remote.dto
 
 import com.squareup.moshi.Json
 
-data class Product(
+data class ProductDTO(
     @Json(name = "id")
     val id: String,
     @Json(name = "product_name")

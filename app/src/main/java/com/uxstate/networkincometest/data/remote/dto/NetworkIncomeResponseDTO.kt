@@ -9,7 +9,7 @@ data class NetworkIncomeResponseDTO(
     @Json(name = "balance_due")
     val balanceDue: String,
     @Json(name = "customer")
-    val customer: Customer,
+    val customer: CustomerDTO,
     @Json(name = "date")
     val date: String,
     @Json(name = "description")
@@ -17,9 +17,9 @@ data class NetworkIncomeResponseDTO(
     @Json(name = "discount")
     val discount: String,
     @Json(name = "payment_list")
-    val paymentList: List<Payment>,
+    val paymentList: List<PaymentDTO>,
     @Json(name = "product_list")
-    val productList: List<Product>,
+    val productList: List<ProductDTO>,
     @Json(name = "record_id")
     val recordId: String,
     @Json(name = "subtotal")
