@@ -13,6 +13,8 @@
 
 [Model Class](./app/src/main/java/com/uxstate/networkincometest/domain/model/ReceiptItem.kt) - Has the relevant data fields, uses BigDecimal as well as LocalDateTime
 
+[Mapper Functions](https://github.com/Tonnie-Dev/NetworkIncomeTest/blob/master/app/src/main/java/com/uxstate/networkincometest/data/remote/mappers/Mappers.kt) - Converts the very bulky Data Transfer Objects (DTOs) to model classes which has the data that we will display to the user.
+
 [DateUtilFunctions](./app/src/main/java/com/uxstate/networkincometest/util/DateUtilFunctions.kt) - Converts date JSON String to LocalDateTime and then back to formatted Human Readable Dates
 
 [String Value XML](./app/src/main/res/values/strings.xml) - nothing fancy here, just string resource with placeholder to format BigDecima and specify currency/dollar symbol and put those 2 decimal places
@@ -21,7 +23,9 @@
 
 
 
+# Screenshots
 
+This is the results when I ran the app on Emulator.
 
 <p align="center">
 <img img width="300" height="600" src="./screenshots/sample_1.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
