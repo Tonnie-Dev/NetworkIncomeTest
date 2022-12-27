@@ -9,7 +9,7 @@
 
 [Building Retrofit Object](./app/src/main/java/com/uxstate/networkincometest/di/AppModule.kt)
 
-[ViewModel Class](.app/src/main/java/com/uxstate/networkincometest/presentation/screens/home_screen/HomeViewModel.kt)
+[ViewModel Class](./app/src/main/java/com/uxstate/networkincometest/presentation/screens/home_screen/HomeViewModel.kt)
 
 
 
