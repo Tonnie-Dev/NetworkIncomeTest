@@ -2,6 +2,7 @@ package com.uxstate.networkincometest.data.remote.repository
 
 import com.uxstate.networkincometest.data.remote.api.IncomeAPI
 import com.uxstate.networkincometest.data.remote.dto.NetworkIncomeResponseDTO
+import com.uxstate.networkincometest.domain.model.ReceiptItem.ReceiptItem
 import com.uxstate.networkincometest.domain.repository.IncomeRepository
 import com.uxstate.networkincometest.util.Resource
 import kotlinx.coroutines.flow.Flow
@@ -11,7 +12,7 @@ import javax.inject.Inject
 
 class IncomeRepositoryImpl @Inject constructor(private val api:IncomeAPI): IncomeRepository{
 
-    override fun getIncome(): Flow<Resource<List<NetworkIncomeResponseDTO>>> = flow {
+    override fun getIncome(): Flow<Resource<List<ReceiptItem>>> = flow {
 
         val response = try {
             api.getAllIncome()
