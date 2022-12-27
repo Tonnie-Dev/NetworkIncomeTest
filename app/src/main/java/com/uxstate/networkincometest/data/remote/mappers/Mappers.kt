@@ -4,6 +4,7 @@ import com.uxstate.networkincometest.data.remote.dto.NetworkIncomeResponseDTO
 import com.uxstate.networkincometest.data.remote.dto.ProductDTO
 import com.uxstate.networkincometest.domain.model.ReceiptItem.Item
 import com.uxstate.networkincometest.domain.model.ReceiptItem.ReceiptItem
+import com.uxstate.networkincometest.util.toLocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -16,10 +17,10 @@ fun NetworkIncomeResponseDTO.toModel(): ReceiptItem {
             customerName = this.customer.customerName,
             description = this.description,
             items = List(this.productList.size) { i -> this.productList[i].toItem() },
-            totalPrice = this.totalAmount,
-            discount = this.discount,
-            totalPayable = this.subtotal,
-            balance = this.balanceDue
+            totalPrice = this.totalAmount.toBigDecimal(),
+            discount = this.discount.toBigDecimal(),
+            totalPayable = this.subtotal.toBigDecimal(),
+            balance = this.balanceDue.toBigDecimal()
     )
 
 }
@@ -31,17 +32,9 @@ fun ProductDTO.toItem(): Item {
     return Item(
             productName = this.productName,
             productQuantity = this.productQuantity,
-            productPrice = this.productTotalPrice
+            productPrice = this.productTotalPrice.toBigDecimal()
     )
 }
 
-//Extension function on String class to LocalDateTime
 
-fun String.toLocalDate(): LocalDateTime {
-
-    val pattern = "yyyy-MM-ddTHH:mm:ss"
-    val dateFormatter = DateTimeFormatter.ofPattern(pattern)
-    return LocalDateTime.parse(this, dateFormatter)
-
-}
 

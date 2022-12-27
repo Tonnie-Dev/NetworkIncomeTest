@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NetworkIncomeTest</string>
+    <string name="display_price">%s USD %,.02f</string>
+    <string name="display_dollar">%d %s - $ %,.02f</string>
 </resources>
