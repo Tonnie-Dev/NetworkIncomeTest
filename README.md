@@ -16,8 +16,8 @@
 
 
 <p align="center">
-<img img width="300" height="600" src="./screenshots/sample_1.png"> &nbsp;
-
+<img img width="200" height="400" src="./screenshots/sample_1.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img img width="200" height="400" src="./screenshots/sample_1.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 </p>
 

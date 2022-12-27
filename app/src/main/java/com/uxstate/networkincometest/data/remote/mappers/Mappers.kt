@@ -2,11 +2,9 @@ package com.uxstate.networkincometest.data.remote.mappers
 
 import com.uxstate.networkincometest.data.remote.dto.NetworkIncomeResponseDTO
 import com.uxstate.networkincometest.data.remote.dto.ProductDTO
-import com.uxstate.networkincometest.domain.model.ReceiptItem.Item
-import com.uxstate.networkincometest.domain.model.ReceiptItem.ReceiptItem
+import com.uxstate.networkincometest.domain.model.Item
+import com.uxstate.networkincometest.domain.model.ReceiptItem
 import com.uxstate.networkincometest.util.toLocalDate
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 
 //NetworkIncomeResponseDTO to model [ReceiptItem]
 

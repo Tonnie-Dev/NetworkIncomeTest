@@ -1,9 +1,9 @@
-package com.uxstate.networkincometest.domain.model.ReceiptItem
+package com.uxstate.networkincometest.domain.model
 
 import android.os.Parcelable
+import com.uxstate.networkincometest.domain.model.Item
 import kotlinx.parcelize.Parcelize
 import java.math.BigDecimal
-import java.time.LocalDate
 import java.time.LocalDateTime
 
 @Parcelize

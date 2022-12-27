@@ -1,4 +1,4 @@
-package com.uxstate.networkincometest.domain.model.ReceiptItem
+package com.uxstate.networkincometest.domain.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

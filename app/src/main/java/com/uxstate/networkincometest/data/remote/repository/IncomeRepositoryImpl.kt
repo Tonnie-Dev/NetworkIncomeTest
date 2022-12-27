@@ -2,7 +2,7 @@ package com.uxstate.networkincometest.data.remote.repository
 
 import com.uxstate.networkincometest.data.remote.api.IncomeAPI
 import com.uxstate.networkincometest.data.remote.mappers.toModel
-import com.uxstate.networkincometest.domain.model.ReceiptItem.ReceiptItem
+import com.uxstate.networkincometest.domain.model.ReceiptItem
 import com.uxstate.networkincometest.domain.repository.IncomeRepository
 import com.uxstate.networkincometest.util.Resource
 import kotlinx.coroutines.flow.Flow

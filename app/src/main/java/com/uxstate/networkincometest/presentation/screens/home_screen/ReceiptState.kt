@@ -1,6 +1,6 @@
 package com.uxstate.networkincometest.presentation.screens.home_screen
 
-import com.uxstate.networkincometest.domain.model.ReceiptItem.ReceiptItem
+import com.uxstate.networkincometest.domain.model.ReceiptItem
 
 data class ReceiptState(
     val isLoading: Boolean = false,

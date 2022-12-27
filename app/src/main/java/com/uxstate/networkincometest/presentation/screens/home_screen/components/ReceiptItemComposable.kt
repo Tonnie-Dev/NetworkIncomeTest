@@ -14,7 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.uxstate.networkincometest.R
-import com.uxstate.networkincometest.domain.model.ReceiptItem.ReceiptItem
+import com.uxstate.networkincometest.domain.model.ReceiptItem
 import com.uxstate.networkincometest.util.toHumanDate
 
 @Composable
