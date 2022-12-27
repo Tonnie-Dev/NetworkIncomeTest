@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(private val container: UseCaseContainer) : ViewModel() {
-    private val _state = MutableStateFlow("")
+    private val _state = MutableStateFlow(ReceiptState())
     val state = _state.asStateFlow()
 
     init {
@@ -31,14 +31,24 @@ class HomeViewModel @Inject constructor(private val container: UseCaseContainer)
                     when (result) {
 
                         is Resource.Success -> {
-                            _state.value = "Data is ${result.data}"
+                            result.data?.let {
+
+                                _state.value = _state.value.copy(receipts = it)
+                            }
 
                         }
                         is Resource.Error -> {
-                            _state.value = "${result.errorMessage}"
+
+                            result.errorMessage?.let {
+
+                                _state.value = _state.value.copy(errorMessage = it)
+                            }
 
                         }
-                        is Resource.Loading -> {}
+                        is Resource.Loading -> {
+
+                            _state.value = _state.value.copy(isLoading = result.isLoading)
+                        }
                     }
                 }
                 .launchIn(viewModelScope)
