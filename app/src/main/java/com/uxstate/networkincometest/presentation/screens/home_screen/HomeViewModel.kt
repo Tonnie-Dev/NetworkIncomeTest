@@ -31,11 +31,11 @@ class HomeViewModel @Inject constructor(private val container: UseCaseContainer)
                     when (result) {
 
                         is Resource.Success -> {
-                            _state.value = "Success, payment is ${result.data}"
+                            _state.value = "Data is ${result.data}"
 
                         }
                         is Resource.Error -> {
-                            _state.value = "Success, payment is ${result.data}"
+                            _state.value = "${result.errorMessage}"
 
                         }
                         is Resource.Loading -> {}
